@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding RSVP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-family: "Lucida Handwriting", "Brush Script MT" , cursive;
+            text-align: center;
+            color: #ffccd9;
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            background-color: #ffccd9;
+            color: #fff;
+            border: none;
+            padding: 15px 20px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff99ac;
+        }
+        .couple-picture {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .couple-picture img {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            border: 5px solid #ffccd9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Wedding RSVP</h1>
+        <div class="couple-picture">
+            <img src="couple.jpg" alt="Couple Picture">
+        </div>
+        <form id="rsvpForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="attend">Will you attend?</label>
+            <select id="attend" name="attend" required>
+                <option value="">Select</option>
+                <option value="yes">Yes, I will attend</option>
+                <option value="no">No, I will not attend</option>
+            </select>
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="0" required>
+            <br> <br>
+            <label for="message">Any Message:</label>
+
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">Submit RSVP</button>
+        </form>
+    </div>
+</body>
+</html>
